@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Home-hero section */
+.home-hero {
+    position: relative;
+    height: calc(100vh - 140px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+    color: white;
+    background-color: white;
+}
+
+.home-hero__img-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.home-hero__img-wrapper::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.home-hero__img-wrapper img {
+    width: 100vw;
+    height: 56.25vw;
+    min-height: 100vh;
+    min-width: 177.77vh; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1200px) {
+    .home-hero__img-wrapper {
+        height: calc(100vh - 100px);
+    }
+}
+
+@media (max-width: 991px) {
+    .home-hero__img-wrapper {
+        height: calc(100vh - 80px);
+    }
+}
+
+.home-hero__title {
+    padding: 0 20px;
+}
+
+h1.home-hero__title {
+    font-size: clamp(30px, 6vw, 80px);
+}
+
+@media (max-width: 991px) {
+    h1.home-hero__title {
+        font-size: 30px;
+    }
+}
+
+h2.home-hero__title {
+    font-size: clamp(18px, 4vw, 32px);
+    font-weight: normal;
+}
+
+
+/* About-authority section */
+.about-authority {
+    padding: 35px 0;
+    background-color: white;
+}
+
+.about-authority__wrap {
+    display: flex;
+    align-items: center;
+}
+
+.about-authority__content {
+    padding: 25px 15px;
+}
+
+.about-authority__title {
+    margin: 0;
+}
+
+.about-athority__content-text {
+    margin: 20px 0;
+}
+
+.about-authority__button {
+    display: inline-block;
+    margin-left: auto;
+}
+
+.about-authority__link {
+    padding: 20px;
+    background-color: #ffc600;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #ffc600;
+    border-radius: 5px;
+	text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.about-authority__link:hover {
+    background-color: white;
+	color: #ffc600;
+}
+
+.about-authority__image img {
+    max-width: 100%;
+    margin: 0 auto;
+}
